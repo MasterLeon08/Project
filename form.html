@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khảo sát học tập THPT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .radio-group {
+            margin-top: 8px;
+        }
+
+        .radio-group input {
+            width: auto;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Khảo sát tình hình học tập THPT</h2>
+
+    <form>
+        <!-- Câu 1 -->
+        <label>1. Bạn đang học lớp:</label>
+        <select>
+            <option>Lớp 10</option>
+            <option>Lớp 11</option>
+            <option>Lớp 12</option>
+        </select>
+
+        <!-- Câu 2 -->
+        <label>2. Bạn cảm thấy việc học hiện tại như thế nào?</label>
+        <div class="radio-group">
+            <input type="radio" name="hoc"> Dễ<br>
+            <input type="radio" name="hoc"> Bình thường<br>
+            <input type="radio" name="hoc"> Khó
+        </div>
+
+        <!-- Câu 3 -->
+        <label>3. Bạn dành bao nhiêu giờ mỗi ngày để học?</label>
+        <input type="number" placeholder="Nhập số giờ">
+
+        <!-- Câu 4 -->
+        <label>4. Môn học bạn yêu thích nhất là gì?</label>
+        <input type="text" placeholder="Ví dụ: Toán, Văn, Anh...">
+
+        <!-- Câu 5 -->
+        <label>5. Bạn có thường bị áp lực học tập không?</label>
+        <div class="radio-group">
+            <input type="radio" name="apluc"> Có<br>
+            <input type="radio" name="apluc"> Không<br>
+            <input type="radio" name="apluc"> Thỉnh thoảng
+        </div>
+
+        <!-- Câu 6 -->
+        <label>6. Ý kiến thêm:</label>
+        <textarea rows="4" placeholder="Nhập ý kiến của bạn..."></textarea>
+
+        <button type="submit">Gửi khảo sát</button>
+    </form>
+</div>
+
+</body>
+</html>
