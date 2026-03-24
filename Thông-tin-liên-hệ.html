@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Liên hệ hỗ trợ - 12C7</title>
+    <style>
+        /* ---------- CSS ĐƠN GIẢN, CHỈ DÙNG CÁC THUỘC TÍNH CƠ BẢN ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f0f7ff;  /* nền xanh nhẹ, dịu mắt */
+            padding: 30px 20px;
+            color: #1e2a3e;
+        }
+
+        /* khung tổng thể - giống phong cách đơn giản, căn giữa */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            padding: 20px 24px 36px 24px;
+            transition: all 0.2s ease;
+        }
+
+        /* tiêu đề chính */
+        .header {
+            text-align: center;
+            padding: 12px 0 16px 0;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 28px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0f3b5c;
+            letter-spacing: -0.3px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #2c5a7a;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* lưới thẻ liên hệ - flex đơn giản, dễ đọc */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+        }
+
+        /* mỗi thẻ thành viên */
+        .contact-card {
+            background: #ffffff;
+            border-radius: 24px;
+            width: 280px;
+            flex: 1 1 260px;
+            padding: 22px 18px 24px 18px;
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e9edf2;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 30px -10px rgba(0, 0, 0, 0.12);
+            border-color: #cbdde9;
+        }
+
+        /* tên người liên hệ */
+        .card-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e4663;
+            margin-bottom: 10px;
+            border-bottom: 2px dotted #cbdde9;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        /* lớp + thông tin nổi bật */
+        .class-info {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c6e9e;
+            background: #eef4fa;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            margin: 12px 0 10px 0;
+        }
+
+        /* mô tả chuyên môn / thành tích */
+        .desc {
+            font-size: 15px;
+            line-height: 1.45;
+            color: #2d3e50;
+            background: #f9fbfd;
+            padding: 12px 10px;
+            border-radius: 20px;
+            margin-top: 12px;
+            font-weight: 500;
+            border-left: 3px solid #5f9dc9;
+            text-align: left;
+        }
+
+        /* nhấn nhẹ cho thành tích */
+        .highlight {
+            font-weight: 600;
+            color: #1f6392;
+        }
+
+        /* footer đơn giản, chữ nhỏ */
+        .footer-note {
+            margin-top: 44px;
+            text-align: center;
+            font-size: 14px;
+            color: #5c6f87;
+            border-top: 1px solid #e2edf2;
+            padding-top: 24px;
+            font-style: normal;
+        }
+
+        /* nếu màn hình nhỏ hơn 500px thì căn chỉnh lại */
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 12px;
+            }
+            .container {
+                padding: 16px 16px 28px 16px;
+            }
+            .card-name {
+                font-size: 22px;
+            }
+            .contact-card {
+                padding: 18px 14px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* style đơn giản, không dùng animation phức tạp, chỉ margin padding border */
+        a {
+            text-decoration: none;
+        }
+
+        /* giữ cho không có màu xanh gạch chân nhưng không dùng link ở đây, nếu cần thì chỉ để nguyên */
+        .contact-card .simple-contact {
+            font-size: 13px;
+            color: #4b6b8a;
+            margin-top: 12px;
+            display: block;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>✨ Kết nối & Hỗ trợ ✨</h1>
+        <p>Nếu gặp thắc mắc, bạn có thể liên hệ với các bạn học sinh lớp 12C7</p>
+    </div>
+
+    <div class="contact-grid">
+        <!-- 1. Lê Quang Khánh -->
+        <div class="contact-card">
+            <div class="card-name">Lê Quang Khánh</div>
+            <div class="class-info">📖 Lớp 12C7</div>
+            <div class="desc">
+                🏆 <span class="highlight">Giải Ba Học Sinh Giỏi Toán Cấp Thành phố</span><br>
+                Với tư duy toán học sắc bén, Khánh sẵn sàng hỗ trợ bạn trong các vấn đề liên quan đến logic, con số và phương pháp học tập hiệu quả.
+            </div>
+            <div class="simple-contact">📞 Liên hệ qua lớp hoặc nhắn tin trực tiếp</div>
+        </div>
+
+        <!-- 2. Vũ Nguyễn Văn Linh -->
+        <div class="contact-card">
+            <div class="card-name">Vũ Nguyễn Văn Linh</div>
+            <div class="class-info">🌍 Lớp 12C7</div>
+            <div class="desc">
+                🎓 <span class="highlight">Người có kinh nghiệm học Tiếng Anh lâu năm</span><br>
+                Từ phương pháp ghi nhớ từ vựng đến luyện nghe - nói, Linh sẽ giúp bạn chinh phục ngoại ngữ một cách tự nhiên và bền vững.
+            </div>
+            <div class="simple-contact">✉️ Sẵn sàng chia sẻ bí kíp học tập</div>
+        </div>
+
+        <!-- 3. Đoàn Nguyễn Yến Nhi -->
+        <div class="contact-card">
+            <div class="card-name">Đoàn Nguyễn Yến Nhi</div>
+            <div class="class-info">🧠 Lớp 12C7</div>
+            <div class="desc">
+                ⚡ <span class="highlight">Học sinh có tư duy logic cao</span><br>
+                Yến Nhi nổi bật với khả năng phân tích vấn đề nhanh nhạy, hỗ trợ giải quyết các bài toán khó, tư duy lập trình và rèn luyện tư duy phản biện.
+            </div>
+            <div class="simple-contact">📌 Có thể hỗ trợ nhóm học tập & giải đáp</div>
+        </div>
+
+        <!-- 4. Bồ Đăng Huy -->
+        <div class="contact-card">
+            <div class="card-name">Bồ Đăng Huy</div>
+            <div class="class-info">😊 Lớp 12C7</div>
+            <div class="desc">
+                🌟 <span class="highlight">Người có khả năng giúp bạn vui khi bạn buồn</span><br>
+                Đôi khi chỉ cần một người bạn biết lắng nghe, một câu chuyện vui hay sự đồng cảm. Huy luôn sẵn lòng động viên, chia sẻ để bạn lấy lại tinh thần.
+            </div>
+            <div class="simple-contact">💬 Trò chuyện, sẻ chia và những phút giây tích cực</div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        💙 Lớp 12C7 luôn đồng hành cùng bạn — Hãy chủ động liên hệ để nhận được sự hỗ trợ tốt nhất!
+    </div>
+</div>
+</body>
+</html>
